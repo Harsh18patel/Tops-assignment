@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            border: 2px solid black;
+            width:900px;
+            height: 750px;
+            background-color: rgb(43, 228, 43);
+            margin-left: 300px;
+        
+        }
+        .main .form{
+            border: 2px solid black;
+            width: 720px;
+            height: 680px;
+            margin-top: 45px;
+            margin-left: 85px;
+            padding-top: 10px;
+            background-color: white;
+            box-shadow: 1px 1px 15px black;
+            border-radius: 5px;
+        }
+        .row{
+            display: flex;
+            gap: 10px;
+            margin-left: 80px;
+            margin-top: 10px;
+        }
+        .row .col1{
+            height: 25px;
+            width: 180px;
+            text-align: end;
+        }
+        .row .col2{
+            height: 25px;
+            width: 200px;
+        }
+        .row .col2 input{
+            height: 25px;
+            width: 200px;
+            border-radius: 4px;
+        }
+        .main .form .row .addrescol textarea{
+            border-radius: 4px;
+        }
+        
+        .main .form .row .expcol select{
+            border-radius: 4px;
+            height: 25px;
+            width: 200px;
+        }
+        .main .form .button button{
+            height: 35px;
+            width: 200px;
+            margin-top: 5px;
+            margin-left: 250px;
+            color: white;
+            background-color: blue;
+            border-radius: 10px;
+
+        }
+        .main .form h2{
+            text-align: center;
+            padding-bottom: 10px;
+        }
+        input::placeholder{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="form">
+            <h2>Registration For Job</h2>
+            <div class="row">
+                <div class="col1">First Name:</div>
+                <div class="col2"><input type="text" placeholder="Enter the first name" name="" id=""></div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col1">Middle Name:</div>
+                <div class="col2"><input type="text" placeholder="Enter the middle name" name="" id=""></div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col1">Last Name:</div>
+                <div class="col2"><input type="text" placeholder="Enter the last name" name="" id=""></div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col1">Address:</div>
+                <div class="col2"><textarea name=""id="" cols="40" rows="5"></textarea></div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col1">Date of Birth</div>
+                <div class="col2"><input type="datet" name="" id=""></div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col1">Gender:</div>
+                <div class="gencol"><input type="radio" name="radio" id=""> male 
+                <input type="radio" id="" name="radio">  </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col1"> Experience:</div>
+                <div class="expcol"><select name="" id="">
+                    <option value="">---select---</option>
+                    <option value="">1year</option>
+                    <option value="">2year</option>
+                    <option value="">3 or more</option>
+                </select></div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col1">Email:</div>
+                <div class="col2"><input type="text" placeholder="Enter the emali" name="" id=""></div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col1">Create Password:</div>
+                <div class="col2"><input type="Text" placeholder="enter the password" name="" id=""></div>
+
+            </div>
+            <div class="row">
+                <div class="col1"></div>
+                <div class="checkbox"><input type="checkbox" name="" id="">Show Password</div>
+                
+
+            </div>
+            <div class="button"><button>Register</button></div>
+        </div>
+    </div>
+</body>
+</html>
