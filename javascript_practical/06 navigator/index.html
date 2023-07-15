@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .head{
+            background-color: rgb(116, 116, 173);
+        }
+        .head .margin{
+            margin: 0px 150px;
+        }
+        .head .padding{
+            padding: 30px 0px;
+        }
+        ul{
+            list-style: none;
+        }
+        .head .main{
+            display: flex;
+            text-align: center;
+        }
+        .head .main .logo{
+            flex:0.5;
+        }
+        .head .main .logo h1{
+            font-size: 30px;
+        }
+        .head .main .navbar {
+            flex: 1;
+        }
+
+        .head .main .navbar ul{
+            display: flex;
+            gap: 25px;
+            font-size: 20px;
+        }
+
+        /* =======  random classs ======= */
+
+        .head .main .nav-toggle {
+            flex: 1;
+        }
+
+        .head .main .nav-toggle ul{
+            display: flex;
+            gap: 25px;
+            font-size: 20px;
+        }
+
+        /* =================================== */
+
+        .head .main .btn{
+            /* color: white; */
+            flex: .5;
+            text-align: center;
+            cursor: pointer;
+        }
+        .head .main .fa-bars{
+            display: none;
+            font-size: 28px;
+            position: relative;
+        }
+
+
+/*    ============== media query =================== */
+
+        @media (max-width:576px) {
+            .margin{
+                margin: 0px 20px;
+            }
+            .head .main .navbar{
+            flex: 1;
+            display: none;
+        }
+        .head .main .nav-toggle{
+            display: block;
+            position: absolute;
+            top: 88px;
+            left: 0;
+            color: black;
+            background-color: rgb(32, 31, 94);
+            width: 100%;
+            text-align: center;
+        }
+        .head .main .nav-toggle ul{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            font-size: 18px;
+        }
+        .head .main .btn{
+            text-align: end;
+        }
+        .head .main .btn .fa-bars{
+            display: block;
+        }
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <section class="head">
+        <div class="margin">
+            <div class="padding">
+                <div class="main">
+                    <div class="logo">
+                        <h1>Javascript</h1>
+                    </div>
+                    <div class="navbar">
+                        <ul>
+                            <li>Home</li>
+                            <li>Gallery</li>
+                            <li>About us</li>
+                            <li>Design</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+                    <div class="btn">
+                        <div class="fa-solid fa-bars"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+<script>
+    let icon = document.querySelector(".fa-bars");
+    let nav = document.querySelector(".navbar");
+    icon.addEventListener("click", function () {
+        nav.classList.toggle("nav-toggle");
+    })
+</script>
+
+</html>

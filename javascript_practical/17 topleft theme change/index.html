@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="header">
+        <div class="head">
+            <div class="flex">
+                <div class="logo">
+                    <span class="fa-solid fa-home"></span>
+                </div>
+                <div class="tbtn">
+                    <span class="fa-solid fa-bars"></span>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="navbar">
+    <ul>
+        <div class="close">
+
+            <div class="fa-solid fa-close"></div>
+        </div>
+
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Pages</a></li>
+            <li><a href="">Blog</a></li>
+        </ul>
+    </div>
+    <section class="main">
+        <div class="div"></div>
+    </section>
+</body>
+
+    <script>
+        let button=document.querySelector(".fa-bars");
+        let nav=document.querySelector(".navbar");
+        let close=document.querySelector(".close");
+    
+
+        button.addEventListener("click",function()
+        {
+            nav.classList.remove("navbar");
+            nav.classList.add("navtoggle");
+        }
+        
+        )
+        close.addEventListener("click",function()
+        {
+            nav.classList.remove("navtoggle");
+            nav.classList.add("navbar");
+        }
+        )
+    </script>
+</html>

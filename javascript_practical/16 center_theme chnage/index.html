@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="header">
+        <div class="head">
+            <div class="flex">
+                <div class="logo">
+                    <span class="fa-solid fa-home"></span>
+                </div>
+                <div class="tbtn">
+                    <span class="fa-solid fa-bars"></span>
+                </div>
+                    <div class="icon">
+                        <span class="fa-solid fa-moon"></span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="navbar">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Pages</a></li>
+            <li><a href="">Blog</a></li>
+        </ul>
+    </div>
+    <section class="main">
+        <div class="div"></div>
+    </section>
+</body>
+
+<script>
+    let button = document.querySelector(".tbtn");
+    let show = document.querySelector(".navbar");
+    let icon = document.querySelector(".fa-bars");
+    let dark= document.querySelector(".fa-moon");
+    let harsh= document.querySelector("#header");
+    let his= document.querySelector(".main .div");
+
+    button.addEventListener("click", function () {
+        show.classList.toggle("navtoggle")
+
+        if (show.classList.contains("navtoggle") == true) {
+            icon.classList.remove("fa-bars")
+            icon.classList.add("fa-close")
+        }
+        else {
+            icon.classList.remove("fa-close")
+            icon.classList.add("fa-bars")
+
+
+        }
+    })
+
+    dark.addEventListener("click",function()
+    {
+
+        if(dark.classList.contains("fa-moon")==true)
+        {
+            dark.classList.remove("fa-moon");
+            dark.classList.add("fa-sun");
+            harsh.style.backgroundColor="black";
+            harsh.style.color="white";
+            his.style.backgroundColor="black";
+            his.style.color="white";
+
+        }
+        else{
+         
+            dark.classList.remove("fa-sun");
+            dark.classList.add("fa-moon");
+            harsh.style.backgroundColor="white";
+            harsh.style.color="black";
+            his.style.backgroundColor="white";
+            his.style.color="black";
+
+        
+        }
+    })
+
+
+</script>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css  ">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body{
+            height: 1000px;
+        }
+        .header{
+            background-color: rgb(167, 142, 190);
+            padding: 30px 0px ;
+            height: 100px;
+            position: fixed;
+            width: 100%;
+        }
+        .header .main{
+            display: flex;
+            gap: 20px;
+            align-items: center;            
+        }
+        .header .main .logo {
+            padding: 20px;
+            flex: 1;
+        }
+        .header .main .logo h2{
+            font-size: 30px;
+        }
+
+        .header .main .navbar{
+            flex: 2;
+        }
+        .header .main .navbar ul{
+            display: flex;
+            gap: 25px;   
+        }
+        .header .main .navbar ul li{
+            font-size: 20px;
+            padding: 10px;
+            /* text-align: center; */
+        }
+        li{
+            list-style: none;
+        }
+        .header .main .button{
+            flex: 0.5;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .header .main .button .fa-bars{
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="main">
+            <div class="logo">
+                <h2>Harsh</h2>
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Us</li>
+                    <li>Design</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="button">
+                <div class="fa-solid fa-bars"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+    <script>
+        window.addEventListener("scroll",function()
+        {
+            let head=document.querySelector(".header");
+            if(window.scrollY>0)
+            {
+                head.style.backgroundColor="blueviolet";
+            }
+            else{
+                head.style.backgroundColor="rgb(167, 142, 190)";
+            }
+        })
+    </script>
+</html>

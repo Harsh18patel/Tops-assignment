@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .head{
+            height: 500px;
+            width: 100%;
+            background-color: rgb(103, 103, 184);
+        }
+        .main{
+            display: flex;
+            height: 500px;
+            width: 100%;
+            background-color: #392a4b;
+            align-items: center;
+            gap: 20px;  
+        }
+        .main .div{
+            height: 100px;
+            width: 100px;
+            background-color: rgb(123, 152, 152);
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+    </div>
+
+    <div class="main">
+    <div class="div" id="div1"></div>
+    <div class="div" id="div2"></div>
+    <div class="div" id="div3"></div>
+    <div class="div" id="div4"></div>
+    </div>
+</body>
+<script>
+    window.addEventListener("scroll",function(){
+        if(window.scrollY>0){
+
+            let set1=setInterval(countinga,1)
+            let counting=500;
+            function countinga(){
+                let divc=document.getElementById("div1");
+                divc.innerHTML=counting++;
+                if(counting==911){
+                    clearInterval(set1);
+                }
+            }
+
+            let set2=setInterval(countingb,1)
+            let counting1=988;
+            function countingb()
+            {
+                let divd=document.getElementById("div2");
+                divd.innerHTML=counting1++;
+                if(counting1==1400){
+                    clearInterval(set2);
+                }
+            }
+            let set3=setInterval(countingc,1)
+            let counting2=1366;
+            function countingc()
+            {
+                let dive=document.getElementById("div3");
+                dive.innerHTML=counting2++;
+                if(counting2==1778)
+                {
+                    clearInterval(set3);
+                }
+            }
+            let set4=setInterval(countingd,1)
+            let counting3=1843;
+            function countingd()
+            {
+                let divd=document.getElementById("div4");
+                divd.innerHTML=counting3++;
+                if(counting3==2255)
+                {
+                    clearInterval(set4);
+                }
+            }
+        }
+        })
+</script>
+</html>

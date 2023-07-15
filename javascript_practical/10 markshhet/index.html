@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .main{
+            border: 2px solid rgba(131, 14, 14, 0.445);
+            width: fit-content;
+            padding: 20px;
+            margin: auto;
+            margin-top: 50px;
+            background-color: rgba(131, 14, 14, 0.445);
+        }
+        .main .subject{
+            display: flex;
+            gap: 50px;
+        }
+        .input{
+            display: grid;
+        }
+        .main .subject table tr td{
+            height: 30px;
+            width: 250px;
+            padding: 5px;
+            color: white;
+        }
+        .main .subject table td input{
+            height: 30px;
+            width: 200px;
+            border: 1px solid white;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .main .subject table td button{
+            height: 35px;
+            width: 120px;
+            font-size: 17px;
+            cursor: pointer;
+            border: 1px solid white;
+            font-weight: 600;
+        }
+        .main .result .h2{
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        .main h2{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Marksheet for information technology</h1>
+        <div class="subject">
+            <table>
+                <tr>
+                    <td colspan="2" style="text-align: center;font-size: 20px;font-weight: 700;">Enter Makrs</td>
+                </tr>
+                <tr>
+                    <td>1. C language</td>
+                    <td><input type="text" name="" id="c"></td>
+                </tr>
+                <tr>
+                    <td>2. C++ language</td>
+                    <td><input type="text" name="" id="c++"></td>
+                </tr>
+                <tr>
+                    <td>3. Database</td>
+                    <td><input type="text" name="" id="database"></td>
+                </tr>
+                <tr>
+                    <td>4. HTML</td>
+                    <td><input type="text" name="" id="html"></td>
+                </tr>
+                <tr>
+                    <td>5. CSS</td>
+                    <td><input type="text" name="" id="css"></td>
+                </tr>
+                <tr>
+                    <td>6. php</td>
+                    <td><input type="text" name="" id="php"></td>
+                </tr>
+                <tr>
+                    <td>7. Core Java</td>
+                    <td><input type="text" name="" id="corejava"></td>
+                </tr>
+                <tr style="text-align: center;">
+                    <td><button onclick="clear()">Clear</button></td>
+                    <td><button onclick="Result()">Result</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="result">
+            <div class="h2">
+                <h2>Total is : <h2 id="total" style="color: red;"></h2>/700</h2>
+            </div>
+            <div class="h2">
+                <h2>Percentage is : <h2 id="percentage" style="color: red;"></h2>%</h2>
+            </div>
+        </div>
+    </div>
+</body>
+
+    <script>
+        function Result()
+        {
+            let sub1=document.getElementById("c").value;
+            let sub2=document.getElementById("c++").value;
+            let sub3=document.getElementById("database").value;
+            let sub4=document.getElementById("html").value;
+            let sub5=document.getElementById("css").value;
+            let sub6=document.getElementById("php").value;
+            let sub7=document.getElementById("corejava").value;
+
+            let res=parseFloat(sub1)+parseFloat(sub2)+parseFloat(sub3)+parseFloat(sub4)+parseFloat(sub5)+parseFloat(sub6)+parseFloat(sub7);
+            document.getElementById("total").innerText=res;
+            document.getElementById("percentage").innerText=res/7;
+        }
+
+        function clear()
+        {
+            document.getElementById("c").value="";
+            document.getElementById("c++").value="";
+            document.getElementById("database").value="";
+            document.getElementById("html").value="";
+            document.getElementById("css").value="";
+            document.getElementById("pho").value="";
+            document.getElementById("corejava").value="";
+            document.getElementById("total").innerText="";
+            document.getElementById("percentage").innerText="";
+        }
+
+    </script>
+</html>

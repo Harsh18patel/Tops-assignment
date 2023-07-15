@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .image img{
+            height: 850px;
+            width: 100%;
+        }
+        .bar .fa-bars{
+            position: fixed;
+            cursor: pointer;
+            color: white;
+            font-size: 35px;
+            margin: 30px 30px;
+        }
+        .navbar ul{
+            background-color: transparent;
+            color: white;
+            position: fixed;
+            left: -150px;
+            top: 20px;
+            display: grid;
+            gap: 25px;
+            padding: 30px;
+            list-style: none;
+            transition: .2s all ease-in-out;
+        }
+        .navbar ul .button{
+            height: 35px;
+            width: 35px;
+            position: absolute;
+            right: 5px;
+            left: 5px;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .navbar-menu ul{
+            background-color: black;
+            color: white;
+            position: fixed;
+            height: 700px;
+            width: 10%;
+            left: 0px;
+            top: 20px;
+            display: grid;
+            gap: 25px;
+            padding: 30px;
+            list-style: none;
+            transition: .2s all ease-in-out;
+        }
+        .navbar-menu ul .button{
+            height: 35px;
+            width: 35px;
+            position: absolute;
+            right: 5px;
+            left: 5px;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .navbar ul .fa-close{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bar">
+        <div class="fa-solid fa-bars"></div>
+    </div>
+    <div class="image">
+        <img src="pic1.jpg" alt="">
+    </div>
+
+    <div class="navbar">
+        <ul>
+            <div class="button">
+                <div class="fa-solid fa-close"></div>
+            </div>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Buy</li>
+            <li>For More</li>
+        </ul>
+    </div>
+</body>
+
+    <script>
+        let menu=document.querySelector(".fa-bars");
+        let nav=document.querySelector(".navbar");
+        let btn=document.querySelector(".fa-close");
+        menu.addEventListener("click",function()
+        {
+            nav.classList.add("navbar-menu");
+        })
+        btn.addEventListener("click",function()
+        {
+            nav.classList.remove("navbar-menu");
+        })
+    </script>
+</html>

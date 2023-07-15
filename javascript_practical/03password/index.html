@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter password:
+    <input type="password" name="" id="input_id"><br>
+    <input type="checkbox" onclick="harsh()" >
+    <label for="">Show password</label>
+</body>
+    <script>
+        function harsh(){
+            let inputx=document.getElementById("input_id");
+            if(inputx.type== "password")
+            {
+                inputx.type = "text";
+            }
+            else{
+                inputx.type = "password";
+            }
+            
+        }
+        
+    </script>
+</html>

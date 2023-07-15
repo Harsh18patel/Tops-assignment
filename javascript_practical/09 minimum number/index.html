@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+            border: 1px solid black;
+            width: 30%;
+            margin: auto;
+            padding: 20px;
+            margin-top: 170px;
+
+        }
+        td {
+        height: 50px;
+        width: 100%;
+      }
+      input {
+        height: 25px;
+      }
+      button {
+        height: 35px;
+        width: 100px;
+      }
+    </style>
+</head>
+<body>
+    <div class="div">
+    <h1>Enter any two number to display which number is minimum from them</h1>
+    <table>
+        <tr>
+            <td>1st Number</td>
+            <td><input type="text" name="" id="first"></td>
+        </tr>
+        <tr>
+            <td>2nd Number</td>
+            <td><input type="text" name="" id="second"></td>
+        </tr>
+        <tr style="text-align: center">
+            <td colspan="2"><button onclick="minimumvalue()">Display</button></td>
+        </tr>
+        <tr>
+            <td>
+              <h3 id="result"></h3>
+            </td>
+        </tr>
+    </table>
+    </div>
+</body>
+
+    <script>
+        function minimumvalue(){
+        let num1= document.getElementById("first").value;
+        let num2= document.getElementById("second").value;
+        let Mini= Math.min(parseFloat(num1),parseFloat(num2));
+        document.getElementById("result").innerHTML=Mini+" is minimum";
+        }
+    </script>
+</html>

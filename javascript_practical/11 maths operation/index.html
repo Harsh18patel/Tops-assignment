@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .math_class{
+            border: 2px solid black;
+            padding: 30px;
+            width: fit-content;
+            margin-top: 30px;
+        }
+        .math_class .num{
+            display: flex;
+            gap: 30px;
+            margin: 20px;
+            align-items: center;
+        }
+        input{
+            height: 25px;
+            width: 200px;
+        }
+        .math_class .operation{
+            display: flex;
+            gap: 60px;
+        }
+        button{
+            height: 50px;
+            width: 70px;
+            font-size: 25px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="math_class">
+        <h1>Maths Operations</h1>
+        <div class="num">
+            <h3>Enter 1st number</h3>
+            <div class=""><input type="text" name="" id="first"></div>
+        </div>
+        <div class="num">
+            <h3>Enter 2nd number</h3>
+            <div class=""><input type="text" name="" id="second"></div>
+        </div>
+        <div class="operation">
+            <div class="btn">
+                <button onclick="addition()">+</button>
+                <button onclick="subtraction()">-</button>
+                <button onclick="multiplication()">*</button>
+                <button onclick="division()">/</button>
+                <button onclick="modulus()">%</button>
+            </div>
+            <div class="result">
+                <h3>Answer is :</h3>
+                <h2 id="result"></h2>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+    <script>
+        function addition()
+        {
+            let num1= document.getElementById("first").value;
+            let num2= document.getElementById("second").value;
+            let res=parseFloat(num1)+parseFloat(num2)
+            document.getElementById("result").innerHTML=res;
+        }
+        function subtraction()
+        {
+            let num1=document.getElementById("first").value;
+            let num2=document.getElementById("second").value;
+            let res=parseFloat(num1)-parseFloat(num2);
+            document.getElementById("result").innerHTML=res;
+        }
+        function multiplication()
+        {
+            let num1=document.getElementById("first").value;
+            let num2=document.getElementById("second").value;
+            let res=parseFloat(num1)*parseFloat(num2);
+            document.getElementById("result").innerHTML=res;
+        }
+        function division()
+        {
+            let num1=document.getElementById("first").value;
+            let num2=document.getElementById("second").value;
+            let res=parseFloat(num1)/parseFloat(num2);
+            document.getElementById("result").innerHTML=res;
+        }
+        function modulus()
+        {
+            let num1=document.getElementById("first").value;
+            let num2=document.getElementById("second").value;
+            let res=parseFloat(num1)%parseFloat(num2);
+            document.getElementById("result").innerHTML=res;
+        }
+    </script>
+</html>
