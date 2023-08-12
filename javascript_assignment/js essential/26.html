@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let str=prompt("enter the string");
+    let strlen=str.length;
+    let str1=str[strlen-1];
+    let str2=str[strlen-2];
+    let str3=str[strlen-3];
+    let strlast3char=`${str3}${str2}${str1}`;
+    if(strlen>3){
+        alert(`${strlast3char}${str}${strlast3char}`);
+    }else{
+        alert("string must be more than 3 character");
+    }
+</script>
+</html>

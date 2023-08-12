@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="current_date"></h1>
+</body>
+<script>
+    let d=new Date;
+    let date=d.getDate();
+    let month=d.getMonth();
+    month+=1;
+    let year=d.getFullYear();
+    date=date<10? "0"+date:date;
+    month=month<10? "0"+ month : month;
+    let curr_date=`${date}/${month}/${year}`;
+    document.getElementById("current_date").innerHTML=curr_date;
+</script>
+</html>

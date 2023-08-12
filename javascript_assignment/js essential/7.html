@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="result"></p>
+    <button onclick="year()">click here</button>
+  </body>
+  <script>
+    function year() {
+      let start = prompt("enter starting year");
+      let end = prompt("enter ending year");
+      for (var i = parseInt(start); i <= parseInt(end); i++) {
+        let d = new Date(i, 0, 1);
+        if (d.getDay() == 0) {
+          document.write("1st January is being a Sunday" + i+"<br>");
+        }
+      }
+    }
+  </script>
+</html>

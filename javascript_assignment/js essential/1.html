@@ -1,0 +1,35 @@
+<!-- Write a JavaScript program to display the current day and time in the following format.   -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="c_time()">
+    <h1 id="day"></h1>
+    <h1 id="current_time"></h1>
+</body>
+<script>
+    function c_time(){
+
+        let d=new Date;
+        let day=d.getDay();
+        let weekdays=["monday","tuesday","wednesday","Thursday","Friday","Saturday","sunday"];
+        let days=weekdays[day-1];
+        let hour=d.getHours();
+        let min=d.getMinutes();
+        let sec=d.getSeconds();
+        let prepand=hour>=12 ? "PM" : "AM";
+        hour=hour<10 ? "0"+hour:hour;
+        min=min<10 ? "0"+min:min;
+        sec=sec<10 ? "0"+sec:sec;
+        hour=hour >=12 ? hour-12 :hour;
+        let time=`Current Time: ${hour} ${prepand}: ${min}: ${sec}`;
+        document.getElementById("day").innerHTML=`current day is: ${days}`;
+        document.getElementById("current_time").innerHTML=time;
+        setTimeout(c_time,1000);
+    }
+</script>
+</html>

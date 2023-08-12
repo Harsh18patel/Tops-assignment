@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #h1{
+            transition: .5s all ease-in-out;
+        }
+    </style>
+</head>
+<body onload="animatstring()">
+    <h1 id="h1">Hello I am meet desai  </h1>
+</body>
+<script>
+    function animatstring(){
+        let string=document.getElementById("h1");
+        let textnode=string.childNodes[0];
+        let text=textnode.data;
+       
+        setInterval(function(){
+            text=text[text.length-1] + text.substring(0,text.length-1);
+            textnode.data=text;
+        },300)
+        
+    }
+
+</script>
+</html>

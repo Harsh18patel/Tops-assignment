@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            font-size: 28px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="area()">area of triangle</button>
+    <h1>Area of Traingle is: <span id="div1"></span></h1>
+</body>
+<script>
+    function area(){
+        let side1=prompt("enter side1");
+        let side2=prompt("enter side2");
+        let side3=prompt("enter side3");
+        let s=(parseFloat(side1)+parseFloat(side2)+parseFloat(side3));
+        s/=2;
+        let side=Math.sqrt(s*((s-side1)*(s-side2)*(s-side3)));
+        document.getElementById("div1").innerHTML=`${side}`;
+    }
+</script>
+</html>
